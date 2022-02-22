@@ -1,6 +1,6 @@
 // this code should be altered because some error
 //as same before, just record it
-//some codes I have wrote had already disappear because I didn't timely reserve it 
+//some codes I had wrote have already disappeared because I didn't timely reserve it 
 //what a pity
 
 #include <stdio.h>
