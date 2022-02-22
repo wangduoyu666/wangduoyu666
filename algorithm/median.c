@@ -2,6 +2,8 @@
 //as same before, just record it
 //some codes I had wrote have already disappeared because I didn't timely reserve it 
 //what a pity
+//太久没有看算法了，好多东西都忘了，还得慢慢捡起来
+//代码这东西，真的得多写才行
 
 #include <stdio.h>
 
