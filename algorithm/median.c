@@ -7,20 +7,6 @@
 
 #include <stdio.h>
 
-void comp(int num1[], int num2[])
-{
-        int h;
-        int sum[h];
-        int e,f;
-        if(e<f)
-                sum[h]=num2[h];
-        else
-                sum[((e+f)/2+1)+h]=num1[h];
-        if(e>f)
-                sum[h]=num1[h];
-        else
-                sum[((e+f)/2+1)+h]=num2[h];
-}
 
 void sort(int total[], int len)
 {
@@ -48,12 +34,12 @@ int main(void)
         int n;
         int c[n];
         int mid;
-        for(n=0; n<(t+y)/2+1;n++)
+        for(n=0; n<y;n++)
         {
-                comp(a[t], b[y]);
+               c[n]=b[n];
         }
         for(n=0; n<(t+y)/2; n++){
-                comp(a[t], b[y]);
+                c[y+n]=a[n];
 }
         for(n=0; n<t+y; n++)
                 printf("%d\n", c[n]);
