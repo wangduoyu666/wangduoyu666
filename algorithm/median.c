@@ -6,7 +6,6 @@
 //代码这东西，真的得多写才行
 
 #include <stdio.h>
-#include <string.h>
 #define t 6
 #define y 7
 
