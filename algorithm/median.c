@@ -45,9 +45,9 @@ int main(void)
                 printf("%d\n", c[n]);
         sort(c, n);
         if(n%2==0)
-        mid=(c[n/2]+c[n/2+1])/2;
+        mid=(c[n/2]+c[n/2-1])/2;
         else
-        mid=c[n/2];
+        mid=c[(n/2)+1];
         return(0);
 }
 
