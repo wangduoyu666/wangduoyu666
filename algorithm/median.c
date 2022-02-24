@@ -38,7 +38,7 @@ int main(void)
         {
                c[n]=b[n];
         }
-        for(n=0; n<(t+y)/2; n++){
+        for(n=0; n<t; n++){
                 c[y+n]=a[n];
 }
         for(n=0; n<t+y; n++)
