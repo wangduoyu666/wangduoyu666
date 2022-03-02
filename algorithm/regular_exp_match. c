@@ -1,1 +1,41 @@
+//This code should be altered, because it's outcome not correct.
 
+void dot(char *a, int alen)
+{
+      int c;
+      char ctest[c];
+      ctest[c]= (char *)malloc(100);
+      for(alen=0; alen<c;alen++){
+              a[alen]=rand()&ctest[c];
+      }
+      printf("%s", a[alen]);
+}
+
+void star(char *b, int blen)
+{
+      int d;
+      char dtest[d];
+      dtest[d]=(char *)malloc(100);
+      dot(dtest, d);
+      for(blen=0; blen<d; blen++){
+             b[blen]=dtest[d];
+      }
+     printf("%s", b[blen]); 
+}
+
+
+int main(void)
+{
+   int e;
+   char etest[e];
+   etest[e]=(char *)malloc(100);
+   etest[e]="abcdhijkqagt";
+   int f;
+   char ftest[f];
+   ftest[f]=(char *)malloc(100);
+   dot(etest, e);
+   printf("%s", etest[e]);
+   star(ftest, f);
+   printf("%s", ftest[f]);
+   return(0);
+}
