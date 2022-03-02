@@ -1,4 +1,4 @@
-//This code should be altered, because it's outcome not correct.
+//This code should be altered, because it's outcome is not correct.
 
 void dot(char *a, int alen)
 {
@@ -6,9 +6,9 @@ void dot(char *a, int alen)
       char ctest[c];
       ctest[c]= (char *)malloc(100);
       for(alen=0; alen<c;alen++){
-              a[alen]=rand()&ctest[c];
+              a[alen]=rand()%c+'a';
       }
-      printf("%s", a[alen]);
+      printf("%c", a[alen]);
 }
 
 void star(char *b, int blen)
@@ -18,7 +18,7 @@ void star(char *b, int blen)
       dtest[d]=(char *)malloc(100);
       dot(dtest, d);
       for(blen=0; blen<d; blen++){
-             b[blen]=dtest[d];
+             b[blen]=rand()%d+'a';
       }
      printf("%s", b[blen]); 
 }
@@ -34,7 +34,7 @@ int main(void)
    char ftest[f];
    ftest[f]=(char *)malloc(100);
    dot(etest, e);
-   printf("%s", etest[e]);
+   printf("%c", etest[e]);
    star(ftest, f);
    printf("%s", ftest[f]);
    return(0);
