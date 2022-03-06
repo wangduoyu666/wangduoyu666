@@ -1,7 +1,6 @@
 //This code should be altered, because I copy the other's idea.
 
 #include <stdio.h>
-#include <stdlib.h>
 #include <string.h>
 #include <stdbool.h>
 
