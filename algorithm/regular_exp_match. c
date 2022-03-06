@@ -1,41 +1,50 @@
-//This code should be altered, because it's outcome is not correct.
+//This code should be altered, because I copy the other's idea.
 
-void dot(char *a, int alen)
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <stdbool.h>
+
+
+bool ismatch(char *s, char *p)
 {
-      int c;
-      char ctest[c];
-      ctest[c]= (char *)malloc(100);
-      for(alen=0; alen<c;alen++){
-              a[alen]=rand()%c+'a';
-      }
-      printf("%c", a[alen]);
+    int m=strlen(s)+1;
+    int n=strlen(p)+1;
+    if(s==NULL || p==NULL){
+            return false;
+    }
+    if(s==NULL && strlen(p)==1){
+            return false;
+    }
+    int rows, cols;
+    int dp[rows][cols];
+    dp[0][0]=true;
+    int i,j;
+    int r,c;
+    for(int r=1; r<m; r++){
+            int i=r-1;
+            for(int c=1; c<n; c++){
+                    int j=c-1;
+                    if(s[i]==p[j] ||p[j]=='.'){
+                            dp[r][c]=dp[r-1][c-1];
+                    }
+                    else if
+                            (p[j]=='*'){
+                                    if(p[j]==s[i] ||p[j-1]=='.'){
+                                            dp[r][c]=dp[r-1][c] || dp[r][c-2];
+                                    }else{
+                                            dp[r][c]=dp[r][c-2];
+                                    }
+                            }
+                    else{
+                            dp[r][c]=false;
+                    }
+            }
+    }
+    return dp[m-1][n-1];
 }
-
-void star(char *b, int blen)
-{
-      int d;
-      char dtest[d];
-      dtest[d]=(char *)malloc(100);
-      dot(dtest, d);
-      for(blen=0; blen<d; blen++){
-             b[blen]=rand()%d+'a';
-      }
-     printf("%s", b[blen]); 
-}
-
 
 int main(void)
 {
-   int e;
-   char etest[e];
-   etest[e]=(char *)malloc(100);
-   etest[e]="abcdhijkqagt";
-   int f;
-   char ftest[f];
-   ftest[f]=(char *)malloc(100);
-   dot(etest, e);
-   printf("%c", etest[e]);
-   star(ftest, f);
-   printf("%s", ftest[f]);
-   return(0);
+
 }
