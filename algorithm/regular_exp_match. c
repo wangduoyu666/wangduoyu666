@@ -10,8 +10,12 @@ bool ismatch(char *s, char *p)
     int m=strlen(s)+1;
     int n=strlen(p)+1;
     if(s==NULL || p==NULL){
-            return false;
+            return true;
     }
+else
+{
+return false
+}
     if(s==NULL && strlen(p)==1){
             return false;
     }
