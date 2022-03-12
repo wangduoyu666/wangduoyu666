@@ -12,10 +12,6 @@ bool ismatch(char *s, char *p)
     if(s==NULL || p==NULL){
             return true;
     }
-else
-{
-return false
-}
     if(s==NULL && strlen(p)==1){
             return false;
     }
