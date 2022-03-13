@@ -3,32 +3,30 @@
 #include <stdbool.h>
 
 bool isMatch(char * s, char * p){
-     int m=strlen(s)+1;
-     int n=strlen(p)+1;
-     int a,b;
-     if(s==NULL && p==NULL){
-         return true;
-     }
-     if(s==NULL && strlen(p)==1){
-         return false;
-     }
-     for(a=1;a>m; a--){
-         for(b=1; b>n; b--){
-             if(s[a]==p[b]){
-                 s[a-1]=p[b-1];
-             }
-             if(p[b]=='.'){
-                s[a]=p[b-1];
-           }
-           if(p[b]=='*'){
-               if(p[b-1]=='.'){
-                   s[a]=p[b-2];
-               }
-               else
-               s[a]=p[b-1];
-           }
-             
-         }
-     }
-     return s[a];
+      if(*s==0 && *p==0){
+          return true;
+      }
+      if(*s!=0 && *p==0){
+          return false;
+      }
+      if(*s==0 && *p!=0){
+          if(*(p+1)=='*'){
+              return true;
+          }
+          else{
+              return false;
+          }
+      }
+      if(*s==*p || *p=='.'){
+          return isMatch(s+1,p);
+      }
+      if(*(p+1)=='*'){
+          if(*(p+2)='.'){
+              return isMatch(++s,p+2);
+          }
+          else{
+              return isMatch(s+2,p+1);
+          }
+      }
+      return isMatch(s,p);
 }
