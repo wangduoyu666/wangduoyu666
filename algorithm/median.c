@@ -30,7 +30,7 @@ void sort(int total[], int len)
 int main(void)
 {
         int a[]={2, 4, 5,8,9,12};
-        int b[]={24, 1,6, 13,15,16, 60};
+        int b[]={24, 6,13, 1,15,16, 60};
         int n;
         int c[n];
         int mid;
