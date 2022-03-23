@@ -22,7 +22,7 @@ void lico(char** cube, int dot) {
 			{
 				return false;
 			}
-			if (column[1-1][j] != 0 && cube[1-1][j++] = '.')
+			if (column[1-1][j] != 0 && column[1-1][j++] = '.')
 				return true;
 			else {
 				return false;
