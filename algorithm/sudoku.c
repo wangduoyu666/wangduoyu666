@@ -17,20 +17,16 @@ void lico(char** cube, int dot) {
 	for (i = 0; i < 9; i++) {
 		for (j = 0; j < 9; j++) {
 			if (row=0 && cube[i][row] !=0 && cube[i++][row]=='.')
-				return true;
-			else{
-				return false;
-			}
+				cube[i++][row]=='.';
+				cube[i--][row]=='.';
 
-			if (col=0 && cube[col][j] != 0 && cube[col][j++]=='.')
-				return true;
-			else {
-
-				return false;
-			}
+			if (col=0 && cube[col][j] != 0 )
+				cube[col][j++]=='.';
+				cube[col][j--]=='.';
 		}
 	}
-	return cube[i][j];
+	printf("%d", cube[i][j]);
+	return 0;
 }
 
 void solvesudoku(char** cube, int boardsize, int* boardcolsize) {
@@ -41,10 +37,10 @@ void solvesudoku(char** cube, int boardsize, int* boardcolsize) {
 	for (a = 0; a < 3; a++) {
 		for (b = 0; b < 3; b++) {
 			for (c = 0; c < 9; c++) {
-				if (cube[a][b] != 0 && cube[a++][b++] == '.')
-					return true;
-				else
-					return false;
+				if (cube[a][b] != 0)
+				cube[a++][b++] == '.';
+				cube[a--][b--]=='.';
+					
 			}
 		}
 	}
