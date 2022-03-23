@@ -16,7 +16,7 @@ void lico(char** cube, int dot) {
 	int col;
 	for (i = 0; i < 9; i++) {
 		for (j = 0; j < 9; j++) {
-			if (row=0 && cube[i][row] !=0 && cube[i++][row]=='.')
+			if (row=0 && cube[i][row] !=0)
 				cube[i+1][row]=='.';
 				cube[i-1][row]=='.';
 
