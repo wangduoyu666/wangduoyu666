@@ -3,33 +3,54 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-bool line[9][1];
-bool column[1][9];
-bool dfs[9][9];
+bool line[9][9];
+bool column[9][9];
 bool block[3][3][9];
 int* space[81];
 int spacesize;
 
+
 void lico(char** cube, int dot) {
 	int i, j;
-
-
+	int row;
+	int col;
 	for (i = 0; i < 9; i++) {
 		for (j = 0; j < 9; j++) {
-			if (line[i][1-1] != 0 && line[i++][1-1] = '.')
+			if (row=0 && cube[i][row] !=0 && cube[i++][row]=='.')
 				return true;
-			else
-			{
+			else{
 				return false;
 			}
-			if (column[1-1][j] != 0 && column[1-1][j++] = '.')
+
+			if (col=0 && cube[col][j] != 0 && cube[col][j++]=='.')
 				return true;
 			else {
+
 				return false;
 			}
 		}
 	}
 	return cube[i][j];
 }
+
+void solvesudoku(char** cube, int boardsize, int* boardcolsize) {
+	memset(line, false, sizeof(line));
+	memset(column, false, sizeof(column));
+	memset(block, false, sizeof(block));
+	int a, b, c;
+	for (a = 0; a < 3; a++) {
+		for (b = 0; b < 3; b++) {
+			for (c = 0; c < 9; c++) {
+				if (cube[a][b] != 0 && cube[a++][b++] == '.')
+					return true;
+				else
+					return false;
+			}
+		}
+	}
+	lico(cube, 0);
+}
+
+
 */
 
