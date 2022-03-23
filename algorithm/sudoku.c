@@ -30,9 +30,6 @@ void lico(char** cube, int dot) {
 }
 
 void solvesudoku(char** cube, int boardsize, int* boardcolsize) {
-	memset(line, false, sizeof(line));
-	memset(column, false, sizeof(column));
-	memset(block, false, sizeof(block));
 	int a, b, c;
 	for (a = 0; a < 3; a++) {
 		for (b = 0; b < 3; b++) {
