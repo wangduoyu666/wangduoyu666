@@ -12,8 +12,6 @@ int spacesize;
 
 void lico(char** cube, int dot) {
 	int i, j;
-	int* cu[9][1] = { 0 };
-	int* dfs[1][9] = { 0 };
 
 
 	for (i = 0; i < 9; i++) {
