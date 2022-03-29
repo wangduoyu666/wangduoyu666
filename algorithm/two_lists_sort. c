@@ -1,7 +1,9 @@
 //time and practice
 //hardworking
 
+#include <stdio.h>
 
+int main(void){
 struct ListNode* mergeTwoLists(struct ListNode* a, struct ListNode* b){
     
     if(a==NULL){
@@ -10,10 +12,7 @@ struct ListNode* mergeTwoLists(struct ListNode* a, struct ListNode* b){
         else if(b==NULL){
             return a;
         }
-        
-        
-        
-          else  if(a->val <b->val){
+ else  if(a->val <b->val){
                 a->next=mergeTwoLists(a->next, b);
                 return a;
                 
@@ -23,3 +22,5 @@ struct ListNode* mergeTwoLists(struct ListNode* a, struct ListNode* b){
                 return b;
             }
         }
+        }
+        
