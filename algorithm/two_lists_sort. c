@@ -3,7 +3,7 @@
 
 #include <stdio.h>
 
-int main(void){
+
 struct ListNode* mergeTwoLists(struct ListNode* a, struct ListNode* b){
     
     if(a==NULL){
@@ -22,5 +22,5 @@ struct ListNode* mergeTwoLists(struct ListNode* a, struct ListNode* b){
                 return b;
             }
         }
-        }
+        
         
