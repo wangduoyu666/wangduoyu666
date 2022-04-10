@@ -3,7 +3,7 @@
 int main(void)
 {
 	int n=0;
-	scanf_s("%d", &n);
+	scanf_s("%d", &n);//记得加&
 	int i;
     int a = 0;
     int b = 0;
