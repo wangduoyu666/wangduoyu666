@@ -54,4 +54,5 @@ int *findSubstring(char *s, char **words,int wordSize, int *reutrnSize){
     printf("%d\n",n);
     return 0;
     }
+      //This code should be modified
     
