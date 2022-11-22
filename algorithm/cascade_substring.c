@@ -16,13 +16,17 @@ int *findSubstring(char *s, char **words,int wordSize, int *reutrnSize){
     printf("%s",c);
     int d;
     d=strlen(c);
+    int ls=strlen(s);
     int *res=(int *)malloc(sizeof(int)*d);
     for(clength=0;clength<3500;clength++){
       int e;
       int start=e;
       char *f;
       char *c[clength];
-      strcpy(f,c[clength]);
+      f=strcat(c[clength],c[clength+1]);
+      f=strcat(c[clength-1],c[clength]);
+      f=strcat(c[clength-1],c[clength+1]);
+      f=strcat(c[clength+1],c[clength-1]);
       for(b=0;b<4000;b++){
         int h;
         h=strcmp(*words,c[clength]);//maybe I should use another function to look the words not the function strcmp 
@@ -31,10 +35,9 @@ int *findSubstring(char *s, char **words,int wordSize, int *reutrnSize){
       }
       int slength;
       for(slength=0;slength<5000;slength++){
-        int i;
-        i=strcmp(s, *words);
-        if(i>0)
-        printf("%d",b);
+        char *i;
+        i=strstr(s, f);
+        int n;
         return 0;
       }
     }
