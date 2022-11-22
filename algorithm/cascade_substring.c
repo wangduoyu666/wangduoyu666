@@ -37,8 +37,21 @@ int *findSubstring(char *s, char **words,int wordSize, int *reutrnSize){
       for(slength=0;slength<5000;slength++){
         char *i;
         i=strstr(s, f);
-        int n;
-        return 0;
+        int n=-1;
+        for(int j=0;s[j]!='\0';j++){
+        n=-1;
+        for(int k=0;i[k]!='\0';k++){
+        if(s[j+k]!=i[k]){
+        n=-1;
+        break;
       }
+      n=j;
+    }
+    if(n!=-1){
+    break;
+    }
+    }
+    printf("%d\n",n);
+    return 0;
     }
     
